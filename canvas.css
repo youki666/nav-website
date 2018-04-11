@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+#canvas {
+  display: block;
+  background: #3f3;
+}
+#eraser {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
