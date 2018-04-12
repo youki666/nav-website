@@ -1,13 +1,80 @@
-body {
+body,ol,li {
   margin: 0;
+  padding: 0
+}
+.actions{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+.actions svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  margin: 0 10px;
+}
+.actions svg.active {
+  fill: red;
+  transform: scale(1.2);
+}
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
 }
 
 #canvas {
   display: block;
-  background: #3f3;
+  background: #fff;
 }
-#eraser {
+.colors {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+ list-style: none;
+}
+.colors > li{
+  width: 20px;
+  height: 20px;
+  margin: 10 0px;
+  border-radius: 10px;
+  border: 3px solid #888;
+}
+.colors > li.active{
+   transform: scale(1.2);
+   transition: all 0.3s;
+   box-shadow: 0 0 3px rgba(.4)
+}
+.colors > li:nth-child(1){
+   background:#f00;
+}
+
+.colors > li:nth-child(2){
+   background:#0f0;
+}
+
+.colors > li:nth-child(3){
+   background:#00f;
+}
+
+.sizes{
   position: fixed;
-  left: 0;
-  bottom: 0;
+  top: 5px;
+  right: 20px;
+  list-style: none;
+}
+.sizes >li {
+  margin: 20px 0;
+}
+.sizes .thin {
+  width: 20px;
+  height: 0;
+  border-top: 2px solid #222;
+}
+.sizes .thick {
+  width: 20px;
+  height: 0;
+  border-top: 6px solid  #222;
 }
